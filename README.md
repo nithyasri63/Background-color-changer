@@ -24,7 +24,7 @@ A simple Background Color Changer built using HTML,CSS and JavaScript.Users can 
   ##Screenshots
 
      ##Desktop
-          ![desktop]()
+          ![desktop](https://github.com/nithyasri63/Background-color-changer/blob/2349d0d8104899abd3e6d4b78a88cf49cc066285/desktop-color-changer.png)
 
 
      ##Mobile
