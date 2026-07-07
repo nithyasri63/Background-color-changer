@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="color-changer.css
+       ">
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Background Color Changer</h1>
+        <p>Click on any color to change the background</p>
+        <div class="contain">
+            <p class="current-color">Current Color:</p>
+            <p id="colorsName"></p>
+        </div>
+            <div class="button-container1">
+                <button id="button1" onclick="colorChange('Red');">Red</button>
+                <button id="button2"onclick="colorChange('Blue');">Blue</button>
+                <button id="button3" onclick="colorChange('Green');">Green</button>
+            </div>
+            <div class="button-container2">
+                <button id="button4" onclick="colorChange('Pink');">Pink</button>
+                <button id="button5" onclick="colorChange('Black');">Black</button>
+                <button id="button6" onclick="colorChange('Yellow');">Yellow</button>
+            </div>
+                
+             <div>
+               <button id="random" onclick="randomColor();">Random Color</button>
+               
+
+           <button id="reset" onclick=" clearColor();
+           ">Reset</button>
+
+           </div>
+
+        <script>
+            let color=document.body;
+            color.style.backgroundColor=localStorage.getItem('display')||'violet ';
+            let name=document.getElementById('colorsName');
+            name.textContent=localStorage.getItem('value')||'violet';
+            name.style.color=localStorage.getItem('colorstyle')||'violet';
+
+            const random=document.getElementById('random');
+            random.style.backgroundColor=localStorage.getItem('random')||'violet';
+            const reset=document.getElementById('reset');
+            reset.style.backgroundColor=localStorage.getItem('reset')||'violet';
+
+            function colorChange(colorName){
+               color.style.backgroundColor=colorName;
+              
+               name.textContent=colorName;
+               name.style.color=colorName;
+               reset.style.backgroundColor=colorName;
+               random.style.backgroundColor=colorName;
+               localStorage.setItem('display',color.style.backgroundColor);
+               localStorage.setItem('value',name.textContent);
+              localStorage.setItem('colorstyle',name.style.color);
+              localStorage.setItem('reset',reset.style.backgroundColor);
+              localStorage.setItem('random', random.style.backgroundColor);
+
+            }
+            //for reset
+            function clearColor(){
+            color.style.backgroundColor='violet';
+            name.textContent='violet';
+            name.style.color='Violet';            
+            reset.style.backgroundColor='violet';
+            random.style.backgroundColor='violet';
+            localStorage.clear();
+            }
+
+            //for random color
+
+            function randomColor(){
+               const user= prompt('enter the color name(except white color)');
+               if(!user){
+                   return;
+               }
+                color.style.backgroundColor=user;
+                name.textContent=user;
+                name.style.color=user;
+               random.style.backgroundColor=user;
+               reset.style.backgroundColor=user;
+                localStorage.setItem('display',color.style.backgroundColor);
+               localStorage.setItem('value',name.textContent);
+              localStorage.setItem('colorstyle',name.style.color);
+              localStorage.setItem('reset',reset.style.backgroundColor);
+               localStorage.setItem('random', random.style.backgroundColor);
+            }
+        </script>
+    </body>
+</html>

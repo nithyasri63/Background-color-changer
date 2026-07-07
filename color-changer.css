@@ -1,0 +1,104 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1,p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 600px;
+    height:130px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+}
+.current-color{
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#colorsName{
+    font-weight: bold;
+}
+
+.button-container1{
+    margin-top: 20px;
+   
+}
+#button1,#button2,#button3{
+    padding:20px 72px;
+    margin-right: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px  7px black;
+}  
+ #button1{
+    background-color: red;
+ }
+ #button2{
+    background-color:blue;
+ }
+ #button3{
+    background-color: green;
+ }
+.button-container2{
+    margin-top: 20px;
+   
+}
+#button4,#button5,#button6{
+    padding:20px 70px;
+    margin-right: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+#button4{
+    background-color: rgb(253, 104, 149);
+     box-shadow: 0px 0px  7px  black;
+ }
+ #button5{
+    background-color:black;
+     box-shadow: 0px 0px  7px   gray;
+ }
+ #button6{
+    background-color:yellow;
+     box-shadow: 0px 0px  7px  black;
+ }
+ #reset,#random{
+    margin-top: 100px;
+    padding: 15px 60px;
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+ }
+
+ @media screen and (max-width:600px){
+    .contain{
+        width:300px;
+        height: 80px;
+    }
+    #button1,#button2,#button3,#button4,#button5,#button6{
+        padding:10px 30px
+    }
+    #reset,#random{
+        padding: 8px 30px;
+    }
+ }
