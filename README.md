@@ -28,5 +28,5 @@ A simple Background Color Changer built using HTML,CSS and JavaScript.Users can 
 
 
      ##Mobile
-         ![mobile]()
+         ![mobile](https://github.com/nithyasri63/Background-color-changer/blob/5d257622e1772f453af5fa4e93d9e91b756e9d52/mobile-color-changer.png)
     
